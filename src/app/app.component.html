@@ -1,0 +1,80 @@
+<!-- <H1>Currency Convertor</H1>
+<hr><br>
+<div class="container">
+  <div style="width: 30%;">
+    <form >
+      <div style="display: flex;justify-content:space-between">
+        <label for="">Currency From:</label>
+        <select name="" id="" #from (change)="change(from.value,to.value)">
+          <option *ngFor="let item of arr" [value]="item.Currency">{{item.Country}}</option>
+        </select>
+      </div>
+      <br>
+      <div style="display: flex;justify-content:space-between"  >
+        <label for="">Currency To:</label>
+        <select name="" id="" #to (change)="change(from.value,to.value)">
+          <option *ngFor="let item of arr" [value]="item.Currency">{{item.Country}}</option>
+        </select>
+      </div>
+      <br>
+      <div style="display: flex;justify-content:space-between"  >
+        <input type="number" placeholder="Enter Amount"  style="width: 85%;" [value]="flag?convertedValue:fromAmount.value" #fromAmount (input)="onAmountChange(fromAmount.value,from.value,to.value,false)"> 
+        <label for="" style="align-content: center;">{{fromCurrency}}</label>
+      </div>
+      <br>
+      <div style="display: flex;justify-content:space-between"  >
+        <input type="text" placeholder="" style="width: 85%;" #toAmount [value]="!flag?convertedValue:toAmount.value" (input)="onAmountChange(toAmount.value,to.value,from.value,true)">
+        <label for="" style="align-content: center;">{{toCurrency}}</label>
+      </div>
+      <br><br>
+      <div class="span">
+        <span>Note: Conversion will automatically done after entering amount</span>
+      </div>
+    </form> -->
+    <!-- <div style="display: flex;justify-content: center;"  >
+      <button style="width: 50%;" (click)="add(from.value,to.value,amount.value)"> Convert</button>
+    </div> -->
+  <!-- </div>
+</div> -->
+
+
+<H1>Currency Convertor</H1>
+<hr><br>
+<div class="container">
+  <div style="width: 30%;">
+    <form [formGroup]="currencyForm">
+      <div style="display: flex;justify-content:space-between">
+        <label>Currency From:</label>
+        <select name="" id="" formControlName="from">
+          <option *ngFor="let item of arr" [value]="item.Currency">{{item.Country}}</option>
+        </select>
+      </div>
+      <br>
+      <div style="display: flex;justify-content:space-between"  >
+        <label>Currency To:</label>
+        <select name="" id="" formControlName="to">
+          <option *ngFor="let item of arr" [value]="item.Currency">{{item.Country}}</option>
+        </select>
+      </div>
+      <br>
+      <div style="display: flex;justify-content:space-between"  >
+        <input type="text" placeholder="Enter Amount"  style="width: 85%;" [value]="flag?convertedValue:fromAmount" formControlName="fromAmount"> 
+        <label style="align-content: center;">{{fromCurrency}}</label>
+      </div>
+      <br>
+      <div style="display: flex;justify-content:space-between"  >
+        <input type="text"  style="width: 85%;" [value]="!(flag)?convertedValue:toAmount" formControlName="toAmount">
+        <label style="align-content: center;">{{toCurrency}}</label>
+      </div>
+      <br>
+      <label style="background-color: black;color: white;padding:3px 15px 3px 15px;" *ngIf="convertionRate!=''">{{convertionRate}}</label>
+      <br><br>
+      <div class="span">
+        <span style="padding: 5px 15px 5px 15px;">Note: Conversion will automatically done after entering amount</span>
+      </div>
+    </form>
+    <!-- <div style="display: flex;justify-content: center;"  >
+      <button style="width: 50%;" (click)="add(from.value,to.value,amount.value)"> Convert</button>
+    </div> -->
+  </div>
+</div>

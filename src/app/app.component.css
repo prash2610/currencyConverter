@@ -1,0 +1,54 @@
+/* *{
+    background-color: #E2EAF4;
+    height: auto;
+    width: auto;
+} */
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 50%;
+    height: 40px;
+    border: 0;
+    border-radius: 7px;
+    background-color: #A2EDF3;
+    font-size: 2.5ch;
+}
+
+button:hover {
+    background-color: #89D4DA;
+}
+
+select {
+    width: 60%;
+    height: 40PX;
+    border: none;
+    border-bottom: groove;
+    font-size: 2ch;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+
+}
+label,input{
+    font-size: 2.5ch;
+    align-content: center;
+}
+label{
+    height: 40px;
+
+}
+.span{
+    display: flex;
+    justify-content: center;
+    font-size: 0.2in;
+}
+span{
+    background-color:#F7F4A2;
+
+}
